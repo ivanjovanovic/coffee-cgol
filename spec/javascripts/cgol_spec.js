@@ -1,7 +1,7 @@
 (function() {
   describe('cgol', function() {
-    return it('should contain current_generation array', function() {
-      return expect(current_generation).toBeDefined();
+    return it('should be defined on window object', function() {
+      return expect(window.cgol).toBeDefined();
     });
   });
 }).call(this);

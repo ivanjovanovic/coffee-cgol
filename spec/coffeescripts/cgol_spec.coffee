@@ -1,3 +1,3 @@
 describe 'cgol', ->
-  it 'should contain current_generation array', ->
-    expect(current_generation).toBeDefined()
+  it 'should be defined on window object', ->
+    expect(window.cgol).toBeDefined()
