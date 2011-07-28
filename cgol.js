@@ -5,6 +5,12 @@
   rs.ji.cgol = {};
   root = typeof exports !== "undefined" && exports !== null ? exports : this;
   root.rs = rs;
+  rs.ji.cgol.getCell = function(x, y) {
+    return rs.ji.cgol.current_generation[rs.ji.cgol.field_size * y + x];
+  };
+  rs.ji.cgol.setCell = function(x, y, value) {
+    return rs.ji.cgol.current_generation[rs.ji.cgol.field_size * y + x] = value;
+  };
   rs.ji.cgol.field_size = 20;
   rs.ji.cgol.current_generation = (function() {
     var _ref, _results;

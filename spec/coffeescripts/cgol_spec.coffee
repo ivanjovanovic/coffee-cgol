@@ -12,3 +12,8 @@ describe 'cgol', ->
     expect(sum).toEqual(0)
     sum = rs.ji.cgol.next_generation.reduce( (a, b) -> a + b )
     expect(sum).toEqual(0)
+
+  it 'should provide a way to set new cell value by providing coordinates and is it on or off', ->
+    expect(rs.ji.cgol.getCell(0,0)).toEqual(0)
+    rs.ji.cgol.setCell(0, 0, 1)
+    expect(rs.ji.cgol.getCell(0,0)).toEqual(1)
