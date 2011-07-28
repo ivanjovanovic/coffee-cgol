@@ -1,5 +1,5 @@
-guard 'coffeescript', :output => '.' do
-  watch('^src/(.*)\.coffee')
+guard 'coffeescript', :output => 'src' do
+  watch('^src/coffee/(.*)\.coffee')
 end
 
 guard 'coffeescript', :output => 'spec/javascripts' do
