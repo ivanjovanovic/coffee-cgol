@@ -1,3 +1,14 @@
 describe 'cgol', ->
   it 'should be defined on window object', ->
-    expect(window.cgol).toBeDefined()
+    expect(rs.ji.cgol).toBeDefined()
+
+  it 'should have initial field size', ->
+    expect(rs.ji.cgol.field_size).toBeDefined()
+
+  it 'should have current and next generation initialized to array of zeros', ->
+    expect(rs.ji.cgol.current_generation.length).toBe(Math.pow(rs.ji.cgol.field_size, 2))
+    expect(rs.ji.cgol.next_generation.length).toBe(Math.pow(rs.ji.cgol.field_size, 2))
+    sum = rs.ji.cgol.current_generation.reduce( (a, b) -> a + b )
+    expect(sum).toEqual(0)
+    sum = rs.ji.cgol.next_generation.reduce( (a, b) -> a + b )
+    expect(sum).toEqual(0)
