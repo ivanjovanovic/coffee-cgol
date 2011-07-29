@@ -6,7 +6,6 @@ rs.ji.renderer.canvas.render = (canvas, cgol) ->
   ctx.fillStyle = "rgb(200,0,0)";
   # will scale to full width
   box_size = canvas.width / cgol.field_size
-  console.log cgol
   map = (i, cell) -> 
     [x, y] = rs.ji.cgol.get_coords i
     if cell == 0

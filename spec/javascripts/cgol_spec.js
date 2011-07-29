@@ -1,5 +1,8 @@
 (function() {
   describe('cgol', function() {
+    beforeEach(function() {
+      return rs.ji.cgol.init(20);
+    });
     it('should be defined on window object', function() {
       return expect(rs.ji.cgol).toBeDefined();
     });
@@ -16,30 +19,23 @@
       rs.ji.cgol.setCell(0, 0, 1);
       rs.ji.cgol.init(3);
       expect(rs.ji.cgol.current_generation.length).toBe(9);
-      expect(rs.ji.cgol.next_generation.length).toBe(9);
       sum = rs.ji.cgol.current_generation.reduce(function(a, b) {
-        return a + b;
-      });
-      expect(sum).toEqual(0);
-      sum = rs.ji.cgol.next_generation.reduce(function(a, b) {
         return a + b;
       });
       return expect(sum).toEqual(0);
     });
-    it('should have current and next generation initialized to array of zeros', function() {
+    it('should have current initialized to array of zeros', function() {
       var sum;
       expect(rs.ji.cgol.current_generation.length).toBe(Math.pow(rs.ji.cgol.field_size, 2));
-      expect(rs.ji.cgol.next_generation.length).toBe(Math.pow(rs.ji.cgol.field_size, 2));
       sum = rs.ji.cgol.current_generation.reduce(function(a, b) {
-        return a + b;
-      });
-      expect(sum).toEqual(0);
-      sum = rs.ji.cgol.next_generation.reduce(function(a, b) {
         return a + b;
       });
       return expect(sum).toEqual(0);
     });
     describe('coordinates calculation', function() {
+      beforeEach(function() {
+        return rs.ji.cgol.init(3);
+      });
       it('should calculate coordinates based on array index', function() {
         var x, y, _ref, _ref2;
         _ref = rs.ji.cgol.get_coords(5), x = _ref[0], y = _ref[1];
@@ -89,9 +85,6 @@
     });
     return describe('next generation production', function() {
       describe('cell destiny decisions', function() {
-        beforeEach(function() {
-          return rs.ji.cgol.init(3);
-        });
         describe('cell under population', function() {
           return it('should die in case that it is surrounded by less than two live neighbours', function() {
             var destiny;

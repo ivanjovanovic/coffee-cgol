@@ -80,7 +80,7 @@
   rs.ji.cgol.init = function(field_size) {
     var num;
     rs.ji.cgol.field_size = field_size;
-    rs.ji.cgol.current_generation = (function() {
+    return rs.ji.cgol.current_generation = (function() {
       var _ref, _results;
       _results = [];
       for (num = 1, _ref = Math.pow(field_size, 2); 1 <= _ref ? num <= _ref : num >= _ref; 1 <= _ref ? num++ : num--) {
@@ -88,7 +88,5 @@
       }
       return _results;
     })();
-    return rs.ji.cgol.next_generation = rs.ji.cgol.current_generation.slice(0);
   };
-  rs.ji.cgol.init(20);
 }).call(this);

@@ -6,7 +6,6 @@
     ctx = canvas.getContext("2d");
     ctx.fillStyle = "rgb(200,0,0)";
     box_size = canvas.width / cgol.field_size;
-    console.log(cgol);
     map = function(i, cell) {
       var x, y, _ref;
       _ref = rs.ji.cgol.get_coords(i), x = _ref[0], y = _ref[1];

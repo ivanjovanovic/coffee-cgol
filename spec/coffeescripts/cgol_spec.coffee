@@ -1,4 +1,8 @@
 describe 'cgol', ->
+  
+  beforeEach ->
+    rs.ji.cgol.init(20)
+
 
   it 'should be defined on window object', ->
     expect(rs.ji.cgol).toBeDefined()
@@ -15,21 +19,19 @@ describe 'cgol', ->
     rs.ji.cgol.setCell(0, 0, 1)
     rs.ji.cgol.init(3)
     expect(rs.ji.cgol.current_generation.length).toBe(9)
-    expect(rs.ji.cgol.next_generation.length).toBe(9)
     sum = rs.ji.cgol.current_generation.reduce( (a, b) -> a + b )
-    expect(sum).toEqual(0)
-    sum = rs.ji.cgol.next_generation.reduce( (a, b) -> a + b )
     expect(sum).toEqual(0)
 
-  it 'should have current and next generation initialized to array of zeros', ->
+  it 'should have current initialized to array of zeros', ->
     expect(rs.ji.cgol.current_generation.length).toBe(Math.pow(rs.ji.cgol.field_size, 2))
-    expect(rs.ji.cgol.next_generation.length).toBe(Math.pow(rs.ji.cgol.field_size, 2))
     sum = rs.ji.cgol.current_generation.reduce( (a, b) -> a + b )
-    expect(sum).toEqual(0)
-    sum = rs.ji.cgol.next_generation.reduce( (a, b) -> a + b )
     expect(sum).toEqual(0)
 
   describe 'coordinates calculation', ->
+    
+    beforeEach ->
+      rs.ji.cgol.init(3)
+
 
     it 'should calculate coordinates based on array index', ->
       [x, y] = rs.ji.cgol.get_coords(5)
@@ -77,10 +79,6 @@ describe 'cgol', ->
   describe 'next generation production', ->
 
     describe 'cell destiny decisions', ->
-
-      beforeEach ->
-          rs.ji.cgol.init(3)
-
 
       describe 'cell under population', ->
 

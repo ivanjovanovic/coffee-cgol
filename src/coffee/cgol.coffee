@@ -65,6 +65,4 @@ rs.ji.cgol.generate = ->
 rs.ji.cgol.init = (field_size) ->
   rs.ji.cgol.field_size = field_size
   rs.ji.cgol.current_generation = (0 for num in [1..Math.pow(field_size, 2)])
-  rs.ji.cgol.next_generation = rs.ji.cgol.current_generation.slice 0
 
-rs.ji.cgol.init(20)
