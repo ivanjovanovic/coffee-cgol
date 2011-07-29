@@ -2,7 +2,7 @@ $(
   ->
     canvas = document.getElementById('canvas')
     looping = false
-    rs.ji.cgol.init(20)
+    rs.ji.cgol.init(50)
     rs.ji.renderer.canvas.render(canvas, rs.ji.cgol)
 
     # set up game control toggler
@@ -25,9 +25,6 @@ $(
         rs.ji.cgol.setCell(x, y, 1)
         canvas.width = canvas.width
         rs.ji.renderer.canvas.render(canvas, rs.ji.cgol)
-
-
-
     )
 
     # rendering loop

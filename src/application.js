@@ -3,7 +3,7 @@
     var canvas, looping;
     canvas = document.getElementById('canvas');
     looping = false;
-    rs.ji.cgol.init(20);
+    rs.ji.cgol.init(50);
     rs.ji.renderer.canvas.render(canvas, rs.ji.cgol);
     $('#game-control').click(function() {
       if (looping) {
