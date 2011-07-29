@@ -1,0 +1,35 @@
+#wrapper { width: 1000px; }
+.game {
+  width: 600px;
+  float: left;
+}
+
+.instructions {
+  margin-left: 10px;
+  width: 380px;
+  float: left;
+}
+
+.instructions h1 {
+  font-family: 'Crushed', sans-serif;
+  margin: 0 0;
+}
+
+.instructions h2 {  
+  font-family: 'Crushed', sans-serif;
+  margin: 5px 0;
+  font-size: 18px;
+}
+
+.instructions {
+  font-size: 13px;
+  font-family: 'Varela', sans-serif;
+}
+
+.instructions .signature {
+  font-size: 34px;
+  font-family: 'Dawning of a New Day', cursive;
+  float: right;
+}
+
+

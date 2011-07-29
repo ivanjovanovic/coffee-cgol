@@ -6,11 +6,54 @@
     <script src="/src/cgol.js"></script>
     <script src="/src/renderer.canvas.js"></script>
     <script src="/src/application.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Varela|Crushed|Dawning+of+a+New+Day' rel='stylesheet' type='text/css'>
+    <link href='style.css' rel='stylesheet' type='text/css'>
   </head>
   <body>
-    <div>
-      <canvas id="canvas" width="600" height="600"></canvas>
+    <div id="wrapper">
+      <div class="game">
+        <canvas id="canvas" width="600" height="600"></canvas>
+        <button id="game-control" class="play">Play</button>
+      </div>
+      <div class="instructions">
+        <h1>Conway's Game of Life</h1>
+        <p>This implementation of Conway's Game of Life is part of my effort to get familiar
+          with <a href="http://jashkenas.github.com/coffee-script/">CoffeScript</a> and <a href="https://developer.mozilla.org/en/Canvas_tutorial">canvas HTML5 element</a>. 
+          It is simple implementation that gives you
+          enough to enjoy its brilliance. More about the game you can find
+          in the <a href="http://en.wikipedia.org/wiki/Conway's_Game_of_Life">Wikipedia article</a></p>
+          <p>Click around the grid to put your initial cell generation to life.
+          When you are ready to see how they evolve just click the <strong>play</strong> button and watch.
+          Evolution of your cell generations will start and by clicking on the grid during the simulation
+          you can help them evolve in various directions. You can always <strong>stop</strong> the game, set some new cells and then
+          continue to watch their evolution. There are <strong>4 rules according to which cells evolve</strong> in order to form the next generation:
+          <ol>
+            <li>Any live cell with fewer than two live neighbours dies.
+            <li>Any live cell with two or three live neighbours lives on.
+            <li>Any live cell with more than three live neighbours dies.
+            <li>Any dead cell with exactly three live neighbours becomes a live cell.
+          </ol>
+        </p>
+        <h2>Source code</h2>
+        <p>Code for the game is available on <a href="http://github.com/ivanjovanovic/coffee-cgol">GitHub</a>.</p>
+        <h2>About me</h2>
+        <p>You can see more about me <a href="http://blog.ivanjovanovic.com" title="My blog">here</a> 
+          and <a href="http://github.com/ivanjovanovic" title="My GitHub account">here</a> 
+          and <a href="https://plus.google.com/104326220116699351892/about" title="My Google+ account">here</a> 
+        <span class="signature">Ivan Jovanovic</span>
+      </div>
+      <div class="instructions share">
+        <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="ivanjovanovic">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+        <g:plusone size="medium"></g:plusone>
+      </div>
     </div>
-    <button id="game-control" class="play">Play</button>
+
+  <script type="text/javascript">
+    (function() {
+      var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+      po.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    })();
+  </script>
   </body>
 </html>
