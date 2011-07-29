@@ -2,6 +2,9 @@
 
 This is simple implementation of Conway's Game of Life in [CoffeeScript](http://jashkenas.github.com/coffee-script/).
 
+For seeing it in action, clone this repository and open index.html file
+in a fairly recent browser (IE9+, Chrome, Firefox, Safari should work).
+
 ------------------------------------
 Copyright (C) 2011 by Ivan Jovanovic (http://ivanjovanovic.com)
 
