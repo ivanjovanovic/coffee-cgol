@@ -5,6 +5,22 @@ This is simple implementation of Conway's Game of Life in [CoffeeScript](http://
 For seeing it in action, clone this repository and open index.html file
 in a fairly recent browser (IE9+, Chrome, Firefox, Safari should work).
 
+For playing with it you will need `Ruby` and `bundler` for start. Then
+just do
+
+`bundle install`
+
+and you'll get all gems you need.
+To run tests do
+
+`bundle exec rake jasmine`
+
+To run guard just do
+
+`guard`
+
+in the root of the project
+
 ------------------------------------
 Copyright (C) 2011 by Ivan Jovanovic (http://ivanjovanovic.com)
 
