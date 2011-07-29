@@ -1,4 +1,4 @@
-= Conway's Game Of Life implementation in CoffeScript
+# Conway's Game Of Life implementation in CoffeeScript
 
 This is simple implementation of Conway's Game of Life in [CoffeeScript](http://jashkenas.github.com/coffee-script/).
 
