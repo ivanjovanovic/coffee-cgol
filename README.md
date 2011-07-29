@@ -15,7 +15,8 @@ To run tests do
 
 `bundle exec rake jasmine`
 
-To run guard just do
+If you would like to edit `.coffee` files you will like to enable guard
+so your `.js` files are automatically updated. Just run
 
 `guard`
 
