@@ -1,6 +1,10 @@
+# make renderer part of the namespace available from window object
 rs.ji.renderer = {}
 rs.ji.renderer.canvas = {}
 
+# mapping rendering function to every element of the array which contains
+# current generation of cells. 
+# Renders directy on provided canvas
 rs.ji.renderer.canvas.render = (canvas, cgol) ->
   ctx = canvas.getContext "2d";
   ctx.fillStyle = "rgb(200,0,0)";

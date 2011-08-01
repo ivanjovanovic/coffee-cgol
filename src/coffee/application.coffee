@@ -1,11 +1,13 @@
+# Execute on DOMContent ready
 $(
   ->
+    # initialize elements and render empty grid
     canvas = document.getElementById('canvas')
     looping = false
     rs.ji.cgol.init(50)
     rs.ji.renderer.canvas.render(canvas, rs.ji.cgol)
 
-    # set up game control toggler
+    # set up game control toggler button with events
     $('#game-control').click(
       ->
         if looping

@@ -5,6 +5,18 @@
   rs.ji.cgol = {};
   root = typeof exports !== "undefined" && exports !== null ? exports : this;
   root.rs = rs;
+  rs.ji.cgol.init = function(field_size) {
+    var num;
+    rs.ji.cgol.field_size = field_size;
+    return rs.ji.cgol.current_generation = (function() {
+      var _ref, _results;
+      _results = [];
+      for (num = 1, _ref = Math.pow(field_size, 2); 1 <= _ref ? num <= _ref : num >= _ref; 1 <= _ref ? num++ : num--) {
+        _results.push(0);
+      }
+      return _results;
+    })();
+  };
   rs.ji.cgol.getCell = function(x, y) {
     var cell;
     cell = void 0;
@@ -76,17 +88,5 @@
       _results.push(map(i, cell));
     }
     return _results;
-  };
-  rs.ji.cgol.init = function(field_size) {
-    var num;
-    rs.ji.cgol.field_size = field_size;
-    return rs.ji.cgol.current_generation = (function() {
-      var _ref, _results;
-      _results = [];
-      for (num = 1, _ref = Math.pow(field_size, 2); 1 <= _ref ? num <= _ref : num >= _ref; 1 <= _ref ? num++ : num--) {
-        _results.push(0);
-      }
-      return _results;
-    })();
   };
 }).call(this);
