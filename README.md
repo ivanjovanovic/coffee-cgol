@@ -20,7 +20,7 @@ so your `.js` files are automatically updated. Just run
 
 `guard`
 
-in the root of the project
+in the root of the project.
 
 ------------------------------------
 Copyright (C) 2011 by Ivan Jovanovic (http://ivanjovanovic.com)
